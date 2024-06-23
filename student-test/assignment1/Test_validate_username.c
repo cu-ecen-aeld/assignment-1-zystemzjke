@@ -4,6 +4,7 @@
 #include "../../examples/autotest-validate/autotest-validate.h"
 #include "../../assignment-autotest/test/assignment1/username-from-conf-file.h"
 
+
 /**
 * This function should:
 *   1) Call the my_username() function in autotest-validate.c to get your hard coded username.
@@ -14,9 +15,25 @@
 */
 void test_validate_my_username()
 {
+
     /**
      * TODO: Replace the line below with your code here as described above to verify your /conf/username.txt 
      * config file and my_username() functions are setup properly
      */
-    TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
+
+    const char *conf_name = malloc_username_from_conf_file();
+    const char *hardcoded_name = my_username();
+    
+    
+    //printf("Hardcoded_name %s\n\n",hardcoded_name );
+
+
+    //printf("Malloc_fn %s\n\n",conf_name );
+
+    bool name_compare=false;
+    if(strcmp(hardcoded_name,conf_name)==0) {name_compare=true;}
+     printf("string compare %d\n\n",name_compare );
+    
+    TEST_ASSERT_TRUE_MESSAGE(name_compare,"Fixed.");
+    
 }

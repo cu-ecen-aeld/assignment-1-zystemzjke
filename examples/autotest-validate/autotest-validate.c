@@ -27,5 +27,10 @@ bool this_function_returns_false()
  */
 const char *my_username()
 {
-    return "todo-please-enter-your-username-here-in-my_username";
+  char *my_username="zystemzjke";
+  
+  //printf("my_username fn: %s\n\n",my_username );
+  
+  return my_username;
+  //return "todo-please-enter-your-username-here-in-my_username";
 }
